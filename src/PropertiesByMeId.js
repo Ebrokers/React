@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import './App.css';
 import { Button, ButtonGroup, Container, Table } from 'reactstrap';
 
-export class PropertiesById extends Component {
+export class PropertiesByMeId extends Component {
 
   state = {
     properties: []
   };
 
   async componentDidMount() {
-    const response = await fetch('/getByMeId/1');
+    const response = await fetch('/getPropertyByMeId/1');
     const body = await response.json();
     this.setState({properties: body});
   }
